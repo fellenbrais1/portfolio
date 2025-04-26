@@ -33,6 +33,9 @@ const benfordsAppPage2Image = document.querySelector(".benfords_app_page2");
 const murderMansionPage1Image = document.querySelector(".murder_mansion_page1");
 const murderMansionPage2Image = document.querySelector(".murder_mansion_page2");
 
+const omnifoodPage1Image = document.querySelector(".omnifood_page1");
+const omnifoodPage2Image = document.querySelector(".omnifood_page2");
+
 /* Toggle elements */
 const benfordsSpecToggle = document.querySelector(".benfords_page_spec");
 const benfordsAchToggle = document.querySelector(".benfords_page_ach");
@@ -53,6 +56,10 @@ const backgammonChalToggle = document.querySelector(".backgammon_page_chal");
 const benfordsAppSpecToggle = document.querySelector(".benfords_app_page_spec");
 const benfordsAppAchToggle = document.querySelector(".benfords_app_page_ach");
 const benfordsAppChalToggle = document.querySelector(".benfords_app_page_chal");
+
+const omnifoodSpecToggle = document.querySelector(".omnifood_page_spec");
+const omnifoodAchToggle = document.querySelector(".omnifood_page_ach");
+const omnifoodChalToggle = document.querySelector(".omnifood_page_chal");
 
 const murderMansionSpecToggle = document.querySelector(
   ".murder_mansion_page_spec"
@@ -80,6 +87,9 @@ const allToggles = [
   benfordsAppSpecToggle,
   benfordsAppAchToggle,
   benfordsAppChalToggle,
+  omnifoodSpecToggle,
+  omnifoodAchToggle,
+  omnifoodChalToggle,
   murderMansionSpecToggle,
   murderMansionAchToggle,
   murderMansionChalToggle,
@@ -112,6 +122,10 @@ const benfordsAppChalList = document.querySelector(
   ".benfords_app_page_chal_list"
 );
 
+const omnifoodSpecList = document.querySelector(".omnifood_page_spec_list");
+const omnifoodAchList = document.querySelector(".omnifood_page_ach_list");
+const omnifoodChalList = document.querySelector(".omnifood_page_chal_list");
+
 const murderMansionSpecList = document.querySelector(
   ".murder_mansion_page_spec_list"
 );
@@ -138,6 +152,9 @@ const allDropdowns = [
   benfordsAppSpecList,
   benfordsAppAchList,
   benfordsAppChalList,
+  omnifoodSpecList,
+  omnifoodAchList,
+  omnifoodChalList,
   murderMansionSpecList,
   murderMansionAchList,
   murderMansionChalList,
@@ -207,6 +224,18 @@ benfordsAppChalToggle.addEventListener("click", () => {
   showDropdown("benfordsAppChal");
 });
 
+omnifoodSpecToggle.addEventListener("click", () => {
+  showDropdown("omnifoodSpec");
+});
+
+omnifoodAchToggle.addEventListener("click", () => {
+  showDropdown("omnifoodAch");
+});
+
+omnifoodChalToggle.addEventListener("click", () => {
+  showDropdown("omnifoodChal");
+});
+
 murderMansionSpecToggle.addEventListener("click", () => {
   showDropdown("murderMansionSpec");
 });
@@ -272,6 +301,16 @@ benfordsAppPage1Image.addEventListener("click", () => {
 
 benfordsAppPage2Image.addEventListener("click", () => {
   const imageSrc = "images/benfords_app_page2.png";
+  showImageModal(imageSrc);
+});
+
+omnifoodPage1Image.addEventListener("click", () => {
+  const imageSrc = "images/omnifood_page1.png";
+  showImageModal(imageSrc);
+});
+
+omnifoodPage2Image.addEventListener("click", () => {
+  const imageSrc = "images/omnifood_page2.png";
   showImageModal(imageSrc);
 });
 
@@ -403,6 +442,24 @@ function showDropdown(elementClicked) {
       removeAllHighlights(benfordsAppChalToggle);
       benfordsAppChalList.classList.toggle("hidden");
       benfordsAppChalToggle.classList.toggle("highlight");
+      break;
+    case "omnifoodSpec":
+      removeAllDropdowns(omnifoodSpecList);
+      removeAllHighlights(omnifoodSpecToggle);
+      omnifoodSpecList.classList.toggle("hidden");
+      omnifoodSpecToggle.classList.toggle("highlight");
+      break;
+    case "omnifoodAch":
+      removeAllDropdowns(omnifoodAchList);
+      removeAllHighlights(omnifoodAchToggle);
+      omnifoodAchList.classList.toggle("hidden");
+      omnifoodAchToggle.classList.toggle("highlight");
+      break;
+    case "omnifoodChal":
+      removeAllDropdowns(omnifoodChalList);
+      removeAllHighlights(omnifoodChalToggle);
+      omnifoodChalList.classList.toggle("hidden");
+      omnifoodChalToggle.classList.toggle("highlight");
       break;
     case "murderMansionSpec":
       removeAllDropdowns(murderMansionSpecList);
