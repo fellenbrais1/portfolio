@@ -30,11 +30,11 @@ const backgammonPage2Image = document.querySelector(".backgammon_page2");
 const benfordsAppPage1Image = document.querySelector(".benfords_app_page1");
 const benfordsAppPage2Image = document.querySelector(".benfords_app_page2");
 
-const murderMansionPage1Image = document.querySelector(".murder_mansion_page1");
-const murderMansionPage2Image = document.querySelector(".murder_mansion_page2");
-
 const omnifoodPage1Image = document.querySelector(".omnifood_page1");
 const omnifoodPage2Image = document.querySelector(".omnifood_page2");
+
+const murderMansionPage1Image = document.querySelector(".murder_mansion_page1");
+const murderMansionPage2Image = document.querySelector(".murder_mansion_page2");
 
 /* Toggle elements */
 const benfordsSpecToggle = document.querySelector(".benfords_page_spec");
