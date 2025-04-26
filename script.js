@@ -9,7 +9,6 @@ console.log(`script.js is running`);
 
 /* Image modal elements */
 const imageModal = document.querySelector(".image_modal");
-const imageShowcase = document.getElementById("image_showcase");
 const blocker = document.querySelector(".blocker");
 
 /* Sound elements */
